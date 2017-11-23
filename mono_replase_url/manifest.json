@@ -1,0 +1,21 @@
+﻿{
+  "manifest_version": 2,
+  "name": "URL置換",
+  "version": "0.2.1",
+  "description": "該当のURLへ変換しリダイレクトする",
+  "browser_action": {
+    "default_title": "replace url"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./jquery-2.1.1.min.js", "./function.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "background",
+    "<all_urls>"
+  ]
+}
